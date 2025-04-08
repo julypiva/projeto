@@ -15,5 +15,3 @@ from selenium.webdriver.common.keys import Keys  # Para simular pressionamento d
 from selenium.webdriver.chrome.service import Service  # Para configurar o serviço do driver do Chrome
 
 import time  # Permite pausas/esperas no código (ex: time.sleep)
-
-from datetime import datetime  # (Repetido) Para trabalhar com datas e horas
