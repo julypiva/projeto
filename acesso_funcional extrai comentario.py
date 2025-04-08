@@ -9,23 +9,22 @@ from datetime import datetime
 # caminho do chromedriver
 driver_path = r"C:\\Users\\julya.piva\\Downloads\\chromedriver-win64\\chromedriver.exe"
 
-# credenciais de login da nossa conta genérica para testes...
-username = "Hateshield_ai"
-password = "hateshield.1"
+# aqui você precisa ajustar conforme suas credenciais do Instagram...
+username = "seu_user" 
+password = "sua_senha"
 
-
-# URL do Instagram
-url = "https://www.instagram.com/julypivaa/"
+# URL do Instagram, aqui você também pode ajustar conforme o perfil que você gostaria de visitar!
+url = "https://www.instagram.com/isapagels/"
 
 # iniciando o driver
 service = Service(driver_path)
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service=service, options=options)
 
-driver.maximize_window()
+driver.maximize_window() # comando para maximizar a tela do chrome quando abrir...
 
 def login_instagram():
-    driver.get("https://www.instagram.com/")
+    driver.get("https://www.instagram.com/") # acessando instagram...
     time.sleep(5)
 
     # insere o nome de usuário
@@ -36,7 +35,7 @@ def login_instagram():
     password_input = driver.find_element(By.NAME, "password")
     password_input.send_keys(password)
 
-    # pressionar Enter pra fazer login
+    # pressiona o Enter pra fazer login
     password_input.send_keys(Keys.RETURN)
     time.sleep(40)  # esperar a pagina carregar
     print("carregou a página... espera mais 10 segundos")
@@ -53,6 +52,7 @@ def login_instagram():
     except:
         pass
 
+# aqui começamos a coletar os comentarios...
 def collect_comments():
     driver.get(url)
     time.sleep(15)
