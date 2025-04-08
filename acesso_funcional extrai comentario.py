@@ -39,7 +39,7 @@ def login_instagram():
     password_input.send_keys(Keys.RETURN)
     time.sleep(40)  # esperar a pagina carregar
     print("carregou a página... espera mais 10 segundos")
-    time.sleep(1000000)
+    time.sleep(10)
 
     # fechar popups
     try:
