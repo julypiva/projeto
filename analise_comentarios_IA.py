@@ -29,6 +29,7 @@ pasta_comentarios = r"C:\Users\julya.piva\Desktop\projeto\log_comentarios"
 # encontra o arquivo mais recente na pasta de comentários...
 arquivos = [f for f in os.listdir(pasta_comentarios) if f.endswith(".txt")]
 caminho_arquivo_mais_recente = max(arquivos, key=lambda f: os.path.getmtime(os.path.join(pasta_comentarios, f)))
+print(f"Arquivo mais recente encontrado: {caminho_arquivo_mais_recente}")
 
 # lendo o arquivo de texto mais recente...
 caminho_arquivo = os.path.join(pasta_comentarios, caminho_arquivo_mais_recente)
