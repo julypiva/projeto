@@ -1,3 +1,5 @@
+# OBS: pesquise com o 
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -6,13 +8,13 @@ import time
 from datetime import datetime
 
 # caminho do chromedriver 
-driver_path = r"C:\\Users\\julya.piva\\Downloads\\chromedriver-win64\\chromedriver.exe"
+driver_path = r"C:\\Users\\julya.piva\\Downloads\\chromedriver-win64\\chromedriver.exe" # mude conforme sua máquina
 
-username = "julypivaa" # seu login do instagram para acesso
-password = "Minhasenha" # sua senha do instagram
+username = "julypivaa" # mude para seu login do instagram para acesso
+password = "Minhasenha" # mude para sua senha do instagram
 
 # URL do Instagram que queremos visitar
-url = "https://www.instagram.com/isapagels/"
+url = "https://www.instagram.com/isapagels/" # mude conforme o perfil que deseja visitar
 
 # iniciando o chrome driver...
 service = Service(driver_path)
@@ -82,7 +84,7 @@ def collect_comments():
 
     # Definindo variável de datas e caminho das pastas...
     current_time = datetime.now().strftime("%d_%m_%Y_%H_%M")
-    folder_path = r"C:\Users\julya.piva\Desktop\projeto\log_comentarios"
+    folder_path = r"C:\Users\julya.piva\Desktop\projeto\log_comentarios" # mude conforme sua máquina
     file_path = folder_path + f"\\comentarios_{current_time}.txt"
 
     with open(file_path, "w", encoding="utf-8") as file:
@@ -100,7 +102,7 @@ def ler_arquivos_salvos():
         "comentarios_28_04_2025_16_10.txt"
     ]
     
-    pasta = r"C:\Users\julya.piva\Desktop\projeto\log_comentarios"
+    pasta = r"C:\Users\julya.piva\Desktop\projeto\log_comentarios" # mude conforme sua máquina 
 
     # Percorre a lista de arquivos definidos anteriormente
     for nome in nomes_arquivos:
