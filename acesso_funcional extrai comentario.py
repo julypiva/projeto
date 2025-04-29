@@ -1,4 +1,4 @@
-# OBS: pesquise com o 
+# OBS: pesquise com o ctrl + f a palavra "mude" e verá as partes a serem adaptadas no momento de rodar o código na sua máquina
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
