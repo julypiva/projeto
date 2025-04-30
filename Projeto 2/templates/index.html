@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitoramento Instagram</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitoramento de Comentários</h1>
+        <form method="POST">
+            <input type="text" name="usuario" placeholder="Seu @ do Instagram" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="text" name="perfil" placeholder="@ do perfil alvo (sem @)" required>
+            <button type="submit">Iniciar Monitoramento</button>
+        </form>
+        
+        {% if mensagem %}
+            <div class="mensagem">{{ mensagem }}</div>
+        {% endif %}
+
+        {% if resultados_sentimento %}
+            <h2>Resultados da Análise de Sentimento</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Comentário</th>
+                        <th>Sentimento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for resultado in resultados_sentimento %}
+                        <tr>
+                            <td>{{ resultado.usuario }}</td>
+                            <td>{{ resultado.comentario }}</td>
+                            <td>{{ resultado.sentimento }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+</body>
+</html>
