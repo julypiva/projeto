@@ -14,7 +14,7 @@ identificando padrões nocivos e auxiliando na moderação de conteúdo. O objet
 - Classificação de comentários com base na análise dos logs (positivo, neutro, negativo).
   
 **Instruções de instalção /configuração:**
-Basta ajustar as pastas de diretório conforme sua máquina, e incluir suas credenciais do Instagram.
+Basta ajustar as pastas de diretório conforme sua máquina.
 
 **Autores:**
 Julya da Mota Piva - 30173701
