@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre o sistema</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='hateShield_logo.png') }}" alt="Logo HateShield" class="logo">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('estatistica') }}">Estatísticas</a></li>
+            <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+        </ul>
+    </div>
+
+    <main class="container">
+        <h1>Sobre</h1>
+        <p>Este sistema foi desenvolvido para monitorar e alertar sobre possíveis discursos de ódio em comentários do Instagram, utilizando técnicas de IA para análise de sentimento e classificação.</p>
+        <p>Desenvolvido por Isabelly e Julya — Projeto de TCC.</p>
+    </main>
+</body>
+</html>

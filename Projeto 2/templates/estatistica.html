@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estatísticas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='hateShield_logo.png') }}" alt="Logo HateShield" class="logo">
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('estatistica') }}">Estatísticas</a></li>
+            <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+        </ul>
+    </div>
+
+    <main class="container">
+        <h1>Estatísticas</h1>
+        <p>Este projeto visa coletar comentários públicos de postagens do Instagram e realizar uma análise automatizada de sentimentos com classificação em positivo, negativo ou neutro. Essa análise é usada para medir a percepção do público sobre determinado perfil, marca ou conteúdo..</p>
+
+        <section>
+            <h2>📊 Melhorias aplicadas ao modelo de análise de sentimentos</h2>
+
+            <h3>1. Coleta de Dados Automatizada</h3>
+            <p>Utilizamos <strong>Selenium</strong> para fazer login no Instagram, acessar perfis públicos e extrair comentários da última postagem. Integramos a extensão <em>IG Comment Export Tool</em> de forma automatizada via código, e realizamos o download dos comentários diretamente em formato Excel.</p>
+            <p>A coleta é armazenada em arquivos de log (.txt), organizados por data e hora para facilitar o histórico e análise posterior.</p>
+
+            <h3>2. Análise de Sentimentos com VADER</h3>
+            <p>Usamos a biblioteca <strong>VADER</strong>, originalmente para inglês. Para adaptar ao português:</p>
+            <ul>
+                <li>Traduzimos os comentários automaticamente com a biblioteca <code>GoogleTranslator</code>.</li>
+                <li>Classificamos os sentimentos com base no <strong>compound score</strong> do VADER:</li>
+            </ul>
+            <ul>
+                <li><strong>Positivo:</strong> score ≥ 0.05</li>
+                <li><strong>Negativo:</strong> score ≤ -0.05</li>
+                <li><strong>Neutro:</strong> entre -0.05 e 0.05</li>
+            </ul>
+
+            <h3>3. Aprimoramento com Dicionários Personalizados</h3>
+            <p>Para aumentar a precisão da classificação de sentimentos, utilizamos dois dicionários locais:</p>
+            <ul>
+                <li><strong>dicionario_elogios.txt:</strong> contém palavras como “lindo”, “parabéns”, “excelente”.</li>
+                <li><strong>dicionario_ofensas.txt:</strong> contém termos como “ridículo”, “idiota”, “nojento”.</li>
+            </ul>
+            <p>Esses dicionários são usados como critério adicional quando o sentimento é classificado como <em>neutro</em> pelo VADER. Isso evita classificações ambíguas e refina os resultados finais.</p>
+
+            <h3>4. Resultados e Armazenamento</h3>
+            <p>Os resultados da análise são salvos em arquivos separados com as colunas:</p>
+            <ul>
+                <li><strong>Usuário</strong></li>
+                <li><strong>Comentário</strong></li>
+                <li><strong>Sentimento identificado</strong></li>
+            </ul>
+            <p>Esses resultados podem ser acessados posteriormente na interface do sistema.</p>
+
+            <h3>5. Interface Web</h3>
+            <p>Desenvolvemos uma interface web em HTML com Flask para facilitar o uso do sistema, onde é possível:</p>
+            <ul>
+                <li>Acessar perfis do Instagram diretamente pela interface</li>
+                <li>Visualizar e exportar estatísticas</li>
+                <li>Navegar pelas seções do projeto (Home, Estatísticas, Sobre)</li>
+            </ul>
+
+            <p><em>Todas essas melhorias aumentaram a precisão da classificação de sentimentos e tornaram o sistema mais robusto e acessível para uso real.</em></p>
+        </section>
+    </main>
+</body>
+</html>
