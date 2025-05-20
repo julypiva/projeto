@@ -1,76 +1,151 @@
-/* Estilos anteriores */
+/* Estilos do corpo */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f6f8;
+    background: #C7D1D6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    min-height: 100vh;
+    margin-top: 60px; /* Para garantir que o conteúdo não fique embaixo do navbar fixo */
+}
+
+/* Estilos do navbar */
+.navbar {
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 0 20px;  /* Padding lateral para dar espaço */
+    box-shadow: 0 4px 12px rgba(34, 55, 64, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Centraliza os itens verticalmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 80px;  /* Definindo uma altura fixa para a navbar */}
+
+/* Logo dentro da navbar */
+.navbar .logo {
+    width: 80px;  /* Ajustando a logo para não ficar grande */
+    height: auto;
+    max-height: 100%;  /* Garante que a altura da logo se ajuste automaticamente */
+    margin-top: auto;  /* Garante que a logo fique centralizada verticalmente */
+    margin-bottom: auto;  /* Garante que a logo fique centralizada verticalmente */
+}
+
+/* Links de navegação */
+.navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
+.navbar ul li {
+    margin: 0 30px;  /* Distância entre os itens */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #223740;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #F2A444;  /* Cor de destaque ao passar o mouse */
+}
+
+
+/* Estilos da container principal */
 .container {
-    background: white;
-    padding: 40px;
+    background-color: #FFFFFF;
+    padding: 30px 40px;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    box-shadow: 0 4px 12px rgba(34, 55, 64, 0.15);
+    width: 800px;
     text-align: center;
+    border: 2px solid #9FB6BF;
 }
 
-h1 {
+/* Logo na página */
+.logo {
+    width: 150px;
     margin-bottom: 20px;
-    color: #333;
 }
 
-input, button {
+/* Título */
+h1 {
+    margin-bottom: 25px;
+    color: #223740;
+}
+
+/* Estilos do formulário */
+form input, form button {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
     border-radius: 6px;
-    border: 1px solid #ccc;
     font-size: 16px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-button {
-    background-color: #007BFF;
-    color: white;
+form button {
+    background-color: #F2A444;
+    color: #fff;
+    font-weight: bold;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+form button:hover {
+    background-color: #F2994B;
 }
 
+/* Mensagem */
 .mensagem {
     margin-top: 20px;
-    padding: 10px;
-    background-color: #e0f7e9;
+    padding: 12px;
+    background-color: #eafaf1;
     border: 1px solid #3cba54;
     color: #2e7d32;
     border-radius: 6px;
 }
 
+/* Subtítulo */
 h2 {
     margin-top: 40px;
+    color: #223740;
 }
 
+/* Tabela */
 table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ccc;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 10px;
+table th, table td {
+    padding: 12px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-th {
-    background-color: #f2f2f2;
+table th {
+    background-color: #9FB6BF;
+    color: #223740;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
