@@ -9,6 +9,8 @@ REQUER INSTALAÇÃO VIA TERMINAL (Comando: pip install nomedabiblioteca):
 nltk  # Biblioteca de processamento de linguagem natural (Natural Language Toolkit) e analisador de sentimento;
 os  # Para interagir com o sistema operacional (ex: manipular arquivos e diretórios)
 selenium  # Para controlar navegadores via automação (com auxílio do WebDriver)
+pyautogui # Para realizar cliques com enter e tab
+SentimentIntensityAnalyzer # Para análise de Sentimento
 
 Exemplo de instalação:
 No seu terminal, você digitará: pip install nltk, depois pip install os, depois pip install nltk.
