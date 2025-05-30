@@ -1,3 +1,5 @@
+# OBS. pesquisar por "substituir pelo seu" e encontrará os diretórios necessários para mudar!
+
 import pyautogui  # Automação de ações do mouse e teclado
 from selenium import webdriver  # Criação do driver do navegador
 from selenium.webdriver.common.by import By  # Seleção de elementos (por ID, classe, etc.)
