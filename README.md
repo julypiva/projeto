@@ -18,13 +18,9 @@ O objetivo do projeto é desenvolver um sistema que permita a análise automáti
 ---
 
 ## 🗂️ Estrutura do Projeto
-
-Caso o projeto tenha uma estrutura de pastas significativa, insira aqui um diagrama com os diretórios principais:
-
-A estrutura a seguir é um exemplo. Vocês devem usar a estrutura do seu projeto obrigatóriamente. 
 ```
-📦 nome-do-projeto
-├── 📁 Projeto
+📦 Projeto
+├── 📁 Pastas
 │   ├── __pycache/
 │   ├── log comentários/comentarios_DD_MM_YYYY_HH_MM.txt
 │   ├── log_analise/analise_sentimento_DD_MM_YYYY_HH_MM.txt
@@ -73,11 +69,14 @@ python main.py
 
 ## 📸 Demonstrações
 
-Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do sistema:
+- Tela inicial:
+![image](https://github.com/user-attachments/assets/474113d4-c842-485c-b3b3-72c79608473e)
 
-- Tela inicial
-- Exemplo de funcionalidade
-- Resultados esperados
+- Exemplo de funcionalidade:
+![image](https://github.com/user-attachments/assets/501b508f-1c43-4d3a-9bb8-ec92941cbb0d)
+
+- Resultados esperados:
+![image](https://github.com/user-attachments/assets/84cf208b-e4db-4cb1-a35d-66228124b778)
 
 ---
 
@@ -90,7 +89,7 @@ Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do 
 
 ---
 
-## 🧠 Disciplinas Envolvidas
+## 🧠 Disciplina Envolvida
 
 - Linguagens Formais e Autômatos
 
