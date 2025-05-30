@@ -69,13 +69,13 @@ python main.py
 
 ## 📸 Demonstrações
 
-- Tela inicial:
+- **Tela inicial:**
 ![image](https://github.com/user-attachments/assets/474113d4-c842-485c-b3b3-72c79608473e)
 
-- Exemplo de funcionalidade:
+- **Exemplo de funcionalidade:**
 ![image](https://github.com/user-attachments/assets/501b508f-1c43-4d3a-9bb8-ec92941cbb0d)
 
-- Resultados esperados:
+- **Resultados esperados:**
 ![image](https://github.com/user-attachments/assets/84cf208b-e4db-4cb1-a35d-66228124b778)
 
 ---
