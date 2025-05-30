@@ -19,16 +19,27 @@ O objetivo do projeto é desenvolver um sistema que permita a análise automáti
 
 ## 🗂️ Estrutura do Projeto
 ```
-📦 Projeto
-├── 📁 Pastas
-│   ├── __pycache/
-│   ├── log comentários/comentarios_DD_MM_YYYY_HH_MM.txt
-│   ├── log_analise/analise_sentimento_DD_MM_YYYY_HH_MM.txt
-│   |── templates/estatistica.html|index.html|sobre.html
-│   └── static/hateShield_logo.png|style.css
-├── app.py
+📦 Projeto 2
+├── 📁 __pycache__/
+│   ├── analise_sentimento.cpython-3*.pyc
+│   └── selenium_script.cpython-3*.pyc
+├── 📁 log_comentarios/
+├── 📁 log_analise/
+├── 📁 static/
+│   ├── hateShield_logo.png
+│   └── style.css
+├── 📁 templates/
+│   ├── estatistica.html
+│   ├── index.html
+│   └── sobre.html
 ├── analise_sentimento.py
+├── app.py
+├── dicionario_elogios.txt
+├── dicionario_ofensas.txt
 ├── selenium_script.py
+├── 📁 __pycache__/venv/  
+├── .gitignore
+├── .gitattributes
 ├── README.md
 └── requirements.txt
 ```
