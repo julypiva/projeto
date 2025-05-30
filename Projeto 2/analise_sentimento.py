@@ -1,12 +1,14 @@
-import os
-from datetime import datetime
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from deep_translator import GoogleTranslator
+# OBS. pesquisar por "substituir pelo seu" e encontrará os diretórios necessários para mudar!
+
+import os  # Operações do sistema (manipulação de arquivos e diretórios)
+from datetime import datetime  # Manipulação de data e hora
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer  # Analisador de sentimentos VADER (baseado em regras)
+from deep_translator import GoogleTranslator  # Tradução automática usando o Google Translate
 
 analyzer = SentimentIntensityAnalyzer()
 
 # Caminhos dos dicionários
-CAMINHO_DICIONARIOS = r"C:\Users\julya.piva\Desktop\dados\projeto"
+CAMINHO_DICIONARIOS = r"C:\Users\julya.piva\Desktop\dados\projeto" # substituir pelo seu
 elogios = set()
 ofensas = set()
 
@@ -30,7 +32,7 @@ def analisar_sentimento_vader(texto_pt):
         texto_en = texto_pt  # fallback se falhar a tradução
 
     if not texto_en or not texto_en.strip():
-        return "Comentário inválido"
+        return "Emojis"
 
     analyzer = SentimentIntensityAnalyzer()
     score = analyzer.polarity_scores(texto_en)
@@ -56,7 +58,7 @@ def analisar_sentimento_vader(texto_pt):
 def processar_analise_sentimento():
     carregar_dicionarios()
 
-    pasta_comentarios = r"C:\Users\julya.piva\Desktop\dados\projeto\log comentarios"
+    pasta_comentarios = r"C:\Users\julya.piva\Desktop\dados\projeto\log comentarios" # substituir pelo seu
     arquivos = [f for f in os.listdir(pasta_comentarios) if f.endswith(".txt")]
     caminho_arquivo_mais_recente = max(arquivos, key=lambda f: os.path.getmtime(os.path.join(pasta_comentarios, f)))
     caminho_arquivo = os.path.join(pasta_comentarios, caminho_arquivo_mais_recente)
@@ -80,7 +82,7 @@ def processar_analise_sentimento():
     # Salva o resultado em arquivo
     data_atual = datetime.now().strftime("%d_%m_%Y_%H_%M")
     nome_arquivo = f"analise_sentimento_{data_atual}.txt"
-    caminho_arquivo_resultado = os.path.join(r"C:\Users\julya.piva\Desktop\dados\projeto\log_analise", nome_arquivo)
+    caminho_arquivo_resultado = os.path.join(r"C:\Users\julya.piva\Desktop\dados\projeto\log_analise", nome_arquivo) # substituir pelo seu
 
     with open(caminho_arquivo_resultado, "w", encoding="utf-8") as f:
         for resultado in resultados:
@@ -89,5 +91,3 @@ def processar_analise_sentimento():
             f.write(f"Sentimento: {resultado['sentimento']}\n\n")
 
     return resultados
-
-
