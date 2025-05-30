@@ -1,32 +1,6 @@
-Listagem das bibliotecas usadas...
-
-NÃO REQUER INSTALAÇÃO:
-datetime  # Para trabalhar com datas e horas (ex: pegar a data/hora atual)
-time  # Permite pausas/esperas no código (ex: time.sleep) 
-
-REQUER INSTALAÇÃO VIA TERMINAL (Comando: pip install nomedabiblioteca):
-
-nltk  # Biblioteca de processamento de linguagem natural (Natural Language Toolkit) e analisador de sentimento;
-os  # Para interagir com o sistema operacional (ex: manipular arquivos e diretórios)
-selenium  # Para controlar navegadores via automação (com auxílio do WebDriver)
-pyautogui # Para realizar cliques com enter e tab
-SentimentIntensityAnalyzer # Para análise de Sentimento
-
-Exemplo de instalação:
-No seu terminal, você digitará: pip install nltk, depois pip install os, depois pip install nltk.
-Se você já possuir alguma das bibliotecas, terá um aviso.
-
-Link de instalação do WebDriver (auxílio do selenium para acessar páginas web) :
-https://googlechromelabs.github.io/chrome-for-testing/
-Ao entrar no link, você deve procurar a sua versão do chrome e instalar o zip "chromedriver" de acordo com sua máquina.
-Exemplo do meu modelo que eu baixei:
-Binary       | Platform | URL	                                                                                               | HTTP status
-chromedriver | win64	  |https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.84/win64/chromedriver-win64.zip | 200
-Obs: você pode consultar nas configurações qual sua versão windows ou linux ou mac.
-
-Com a instalação do webdriver e das bibliotecas (e os ajustes de diretório e credenciais), você poderá executar o código e fazer o uso dos imports:
-
-from selenium.webdriver.common.by import By  # Para localizar elementos na página (ex: por ID, classe, etc.)
-from selenium.webdriver.common.keys import Keys  # Para simular pressionamento de teclas no navegador
-from selenium.webdriver.chrome.service import Service  # Para configurar o serviço do driver do Chrome
-from nltk.sentiment import SentimentIntensityAnalyzer  # Analisador de sentimento da biblioteca NLTK
+selenium
+pyautogui
+pyperclip
+pandas
+vaderSentiment
+deep-translator
