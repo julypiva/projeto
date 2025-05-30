@@ -1,4 +1,5 @@
-# 🚀 Pipeline de Logs com IA para análise de comentários nocivos
+# 🚀 Monitoramento de Discurso de Ódio no Instagram: Um Pipeline de Logs com Inteligência Artificial para Identificação e Análise de comentários nocivos
+
 
 **Resumo:** 
 Este projeto automatiza a coleta e análise de sentimentos de comentários públicos do Instagram, classificando-os em positivo, negativo ou neutro. A solução utiliza técnicas de tradução, análise de sentimentos com VADER e dicionários personalizados para aprimorar a precisão, apresentando os resultados em uma interface web intuitiva.
