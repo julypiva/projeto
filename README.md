@@ -12,7 +12,8 @@ O objetivo do projeto é desenvolver um sistema que permita a análise automáti
 ---
 
 ## 👨‍💻 Tecnologias Utilizadas
-- Python: Selenium, Pandas, Pyautogui, Pyperclip, Os, tkinter
+- Python: Selenium, Pandas, Pyautogui, Pyperclip, Os, tkinter, Datetime
+- Chrome WebDriver 
 - GoogleTranslator
 - vaderSentiment
 
