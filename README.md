@@ -1,5 +1,4 @@
-# 🚀 Monitoramento de Discurso de Ódio no Instagram:
-# Um Pipeline de Logs com Inteligência Artificial para Identificação e Análise de comentários nocivos
+# 🚀 Monitoramento de Discurso de Ódio no Instagram: Um Pipeline de Logs com Inteligência Artificial para Identificação e Análise de comentários nocivos
 
 
 **Resumo:** 
