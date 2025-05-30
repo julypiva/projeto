@@ -86,7 +86,7 @@ Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do 
 | Nome | GitHub |
 |------|--------|
 | Julya da Mota Piva | [@julypiva](https://github.com/julypiva) |
-| Isabelly Constantino Pagels | [@ciclano](https://github.com/ciclano) |
+| Isabelly Constantino Pagels | [@isapagels](https://github.com/isapagels) |
 
 ---
 
@@ -105,7 +105,7 @@ Inclua aqui prints, gifs ou vídeos mostrando a interface ou o funcionamento do 
 - Professora orientadora: **Dra. Andréa Ono Sakai**
 - Evento: **Mostra de Tecnologia 1º Semestre de 2025**
 - Local: Laboratório 12
-- Datas: 05 e 06 de junho de 2025
+- Data: 06 de junho de 2025
 
 ---
 
