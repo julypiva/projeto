@@ -1,5 +1,3 @@
-# OBS. pesquisar por "substituir pelo seu" e encontrará os diretórios necessários para mudar!
-
 import pyautogui  # Automação de ações do mouse e teclado
 from selenium import webdriver  # Criação do driver do navegador
 from selenium.webdriver.common.by import By  # Seleção de elementos (por ID, classe, etc.)
@@ -72,7 +70,7 @@ def iniciar_monitoramento(username, password, perfil):
     try:
         driver.get("https://www.instagram.com/") # acessando a página de login do instagram
         sleep_com_contagem(5, "👤 Acessando página de Login do Instagram...")
-        pyautogui.hotkey("ctrl", "w") # fechando a página da extensão
+        #pyautogui.hotkey("ctrl", "w") # fechando a página da extensão
         sleep_com_contagem(3, "👤 Fazendo Login...")
 
         # Fazendo Login...
@@ -80,7 +78,7 @@ def iniciar_monitoramento(username, password, perfil):
         driver.find_element(By.NAME, "password").send_keys(password)
         driver.find_element(By.NAME, "password").send_keys(Keys.RETURN)
 
-        sleep_com_contagem(25, "🚨 Aguarde: digite o código de dois fatores se necessário!")
+        sleep_com_contagem(15, "🚨 Aguarde: digite o código de dois fatores se necessário!")
 
         # Clicar nos botões "Agora não", se aparecerem
         for _ in range(2):
@@ -127,14 +125,18 @@ def iniciar_monitoramento(username, password, perfil):
         # Armazenar a URL copiada em uma variável
         url_temp = pyperclip.paste()
         print("URL atual:", url_temp)
-
+        
+        sleep_com_contagem(5, "🔁 Enviar link armazenado para a extensão extrair...")
+        pyautogui.hotkey("win", "r")
+        time.sleep(1)
+        pyautogui.write("chrome")
         time.sleep(2)
-        pyautogui.hotkey("ctrl", "t")
-        time.sleep(4)
-        pyautogui.write("chrome-extension://hpfnaodfcakdfbnompnfglhjmkoinbfm/options.html")
         pyautogui.press("enter")
-        sleep_com_contagem(8, "🔁 Carregando página...")
-
+        time.sleep(3)
+        pyautogui.write("chrome-extension://hpfnaodfcakdfbnompnfglhjmkoinbfm/options.html")
+        time.sleep(2)
+        pyautogui.press("enter")
+        sleep_com_contagem(7, "🔁 Carregando página da extensão...")
         pyautogui.press("tab")
         pyautogui.write(url_temp)
         time.sleep(2)
@@ -147,7 +149,9 @@ def iniciar_monitoramento(username, password, perfil):
         pyautogui.press("tab")
         pyautogui.press("tab")
         pyautogui.press("enter")
-        sleep_com_contagem(8, "🔁 Salvando o arquivo xlsx...")
+        
+        sleep_com_contagem(25, "🔁 Salvando o arquivo xlsx...")
+        pyautogui.hotkey("ctrl", "w") #fecha o navegador
 
         # TRATAMENTO COM PANDAS
         downloads_path = r"C:\Users\julya.piva\Downloads" # caminho da pasta de downloads (substituir pelo seu)
